@@ -21,7 +21,7 @@ module.exports = events.createEmitter({
     watch: function (modelOrCollection, opts) {
         var events;
         if (modelOrCollection.isCollection) {
-            events = 'add remove reset';
+            events = 'add remove reset change';
         } else if (modelOrCollection.isState) {
             events = 'change';
         } else {
